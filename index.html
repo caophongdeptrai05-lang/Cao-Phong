@@ -1,44 +1,1516 @@
-<!doctype html>
-<html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lời chúc dành cho em ❤️</title>
-    <link
-      rel="icon"
-      type="image/png"
-      href="https://i.postimg.cc/qvjz8QFW/Logo.png"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./style/style.css" />
-  </head>
-  <body>
-    <div id="intro-screen">
-      <div id="intro-text">Chạm vào trái tim</div>
-      <div id="heart" role="button" aria-label="Bắt đầu trình chiếu">❤️</div>
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cao Phong — Modules Infinity Service & Bot Zalo Full Chức Năng</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            apple: {
+              bg: '#F5F5F7',
+              card: '#FFFFFF',
+              text: '#1D1D1F',
+              subtext: '#6E6E73',
+              blue: '#0071E3',
+              cyan: '#06B6D4',
+              indigo: '#6366F1',
+              coral: '#FF6B6B',
+              peach: '#FF8E53',
+              emerald: '#10B981'
+            }
+          },
+          boxShadow: {
+            'apple-sm': '0 2px 10px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.02)',
+            'apple-md': '0 12px 32px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.03)',
+            'apple-lg': '0 24px 54px rgba(0, 113, 227, 0.10), 0 4px 12px rgba(0, 0, 0, 0.04)',
+            'apple-glow': '0 16px 40px -8px rgba(0, 113, 227, 0.28)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* ==========================================================================
+       APPLE WHITE + VIBRANT MESH CUSTOM STYLING & HARDWARE-ACCELERATED ANIMATIONS
+       ========================================================================== */
+    :root {
+      --ease-apple: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    body {
+      background-color: #F5F5F7;
+      color: #1D1D1F;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Vibrant Apple Mesh Background Orbs */
+    .mesh-canvas {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 12% 15%, rgba(0, 113, 227, 0.11) 0%, transparent 42%),
+        radial-gradient(circle at 88% 12%, rgba(255, 107, 107, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 78% 82%, rgba(6, 182, 212, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 20% 85%, rgba(99, 102, 241, 0.10) 0%, transparent 45%),
+        #F5F5F7;
+    }
+
+    .floating-orb {
+      position: absolute;
+      border-radius: 9999px;
+      filter: blur(70px);
+      opacity: 0.45;
+      animation: floatOrb 18s ease-in-out infinite alternate;
+      will-change: transform;
+    }
+
+    @keyframes floatOrb {
+      0% { transform: translate3d(0, 0, 0) scale(1); }
+      50% { transform: translate3d(30px, -25px, 0) scale(1.06); }
+      100% { transform: translate3d(-20px, 20px, 0) scale(0.96); }
+    }
+
+    /* Frosted Glass Apple Surfaces */
+    .apple-glass {
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+    }
+
+    .apple-card {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(0, 0, 0, 0.055);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+      transition: transform 0.45s var(--ease-apple), box-shadow 0.45s var(--ease-apple), border-color 0.35s ease;
+    }
+
+    .apple-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 48px rgba(0, 113, 227, 0.09), 0 4px 12px rgba(0, 0, 0, 0.04);
+      border-color: rgba(0, 113, 227, 0.22);
+    }
+
+    /* Flawless SPA Tab Switching Animation */
+    .tab-panel {
+      display: none;
+      opacity: 0;
+      transform: translateY(14px) scale(0.992);
+      transition: opacity 0.42s var(--ease-apple), transform 0.42s var(--ease-apple);
+      will-change: opacity, transform;
+    }
+
+    .tab-panel.active-panel {
+      display: block;
+      animation: tabEnter 0.48s var(--ease-apple) forwards;
+    }
+
+    @keyframes tabEnter {
+      0% {
+        opacity: 0;
+        transform: translateY(16px) scale(0.992);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    /* Gradient Text & Vibrant Accents */
+    .text-gradient-vibrant {
+      background: linear-gradient(135deg, #0071E3 0%, #6366F1 45%, #FF6B6B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .text-gradient-brevent {
+      background: linear-gradient(135deg, #059669 0%, #06B6D4 55%, #0071E3 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .bg-gradient-vibrant {
+      background: linear-gradient(135deg, #0071E3 0%, #4F46E5 50%, #FF6B6B 100%);
+    }
+
+    /* Active Navigation Pill */
+    .nav-tab-btn {
+      position: relative;
+      transition: all 0.3s var(--ease-apple);
+    }
+    .nav-tab-btn.active {
+      background: #1D1D1F;
+      color: #FFFFFF;
+      box-shadow: 0 6px 18px rgba(29, 29, 31, 0.18);
+    }
+
+    /* Subtle Pulse Ring for CTA */
+    @keyframes softPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(0, 113, 227, 0.35); }
+      50% { box-shadow: 0 0 0 10px rgba(0, 113, 227, 0); }
+    }
+    .btn-pulse {
+      animation: softPulse 2.6s infinite;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F5F5F7;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D2D2D7;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #86868B;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-apple-blue selection:text-white">
+
+  <!-- ==========================================================================
+       AMBIENT VIBRANT APPLE WHITE MESH BACKGROUND
+       ========================================================================== -->
+  <div class="mesh-canvas" aria-hidden="true">
+    <div class="floating-orb w-96 h-96 bg-sky-300/40 top-[-5%] left-[5%]"></div>
+    <div class="floating-orb w-96 h-96 bg-rose-300/40 top-[8%] right-[6%]" style="animation-delay: -5s;"></div>
+    <div class="floating-orb w-80 h-80 bg-teal-300/35 bottom-[10%] left-[25%]" style="animation-delay: -10s;"></div>
+  </div>
+
+  <!-- ==========================================================================
+       STICKY APPLE GLASS HEADER WITH 4-TAB NAVIGATION (100% NO-BUG SWITCHING)
+       ========================================================================== -->
+  <header class="sticky top-0 z-40 px-3 sm:px-6 pt-3 pb-2">
+    <div class="max-w-7xl mx-auto apple-glass rounded-2xl px-4 sm:px-6 py-3 shadow-apple-sm flex items-center justify-between gap-3">
+      
+      <!-- Brand Identity: CAO PHONG (Replaced "Tech" completely) -->
+      <button onclick="switchTab('tab-home')" class="flex items-center gap-3 text-left group focus:outline-none">
+        <div class="relative w-11 h-11 rounded-2xl bg-gradient-to-tr from-[#0071E3] via-[#06B6D4] to-[#FF6B6B] p-[2px] shadow-md group-hover:scale-105 transition-transform duration-300">
+          <div class="w-full h-full bg-white rounded-[14px] flex items-center justify-center">
+            <!-- Custom Cao Phong (CP) Monogram SVG -->
+            <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="cpLogoGrad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#0071E3"/>
+                  <stop offset="50%" stop-color="#6366F1"/>
+                  <stop offset="100%" stop-color="#FF6B6B"/>
+                </linearGradient>
+              </defs>
+              <path d="M19 8H13C9.68629 8 7 10.6863 7 14V26C7 29.3137 9.68629 32 13 32H19" stroke="url(#cpLogoGrad)" stroke-width="3.8" stroke-linecap="round"/>
+              <path d="M23 32V8H29.5C32.5376 8 35 10.4624 35 13.5C35 16.5376 32.5376 19 29.5 19H23" stroke="url(#cpLogoGrad)" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="31" cy="28" r="3" fill="#10B981"/>
+            </svg>
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-extrabold text-lg sm:text-xl tracking-tight text-apple-text">Cao Phong</span>
+            <span class="hidden sm:inline-flex items-center px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider rounded-full bg-emerald-50 text-emerald-600 border border-emerald-200">
+              Verified Dev
+            </span>
+          </div>
+          <p class="text-xs text-apple-subtext font-medium">Android Optimization &amp; Zalo Bot Studio</p>
+        </div>
+      </button>
+
+      <!-- Desktop 4-Tab Pill Switcher -->
+      <nav aria-label="Main Tabs" class="hidden lg:flex items-center bg-[#EBEBED]/80 p-1.5 rounded-2xl border border-black/5">
+        <button type="button" data-tab-target="tab-home" onclick="switchTab('tab-home')" class="nav-tab-btn active px-4 py-2 rounded-xl text-sm font-semibold text-apple-text flex items-center gap-2">
+          <span>01. Trang Chủ</span>
+        </button>
+        <button type="button" data-tab-target="tab-modules" onclick="switchTab('tab-modules')" class="nav-tab-btn px-4 py-2 rounded-xl text-sm font-semibold text-apple-subtext hover:text-apple-text flex items-center gap-2">
+          <span>02. Modules Infinity (V1–V3)</span>
+          <span class="px-1.5 py-0.5 text-[10px] font-bold rounded-md bg-gradient-to-r from-orange-500 to-rose-500 text-white">HOT</span>
+        </button>
+        <button type="button" data-tab-target="tab-zalobot" onclick="switchTab('tab-zalobot')" class="nav-tab-btn px-4 py-2 rounded-xl text-sm font-semibold text-apple-subtext hover:text-apple-text flex items-center gap-2">
+          <span>03. Bot Zalo Pro</span>
+        </button>
+        <button type="button" data-tab-target="tab-about" onclick="switchTab('tab-about')" class="nav-tab-btn px-4 py-2 rounded-xl text-sm font-semibold text-apple-subtext hover:text-apple-text flex items-center gap-2">
+          <span>04. Giới Thiệu &amp; Liên Hệ</span>
+        </button>
+      </nav>
+
+      <!-- Quick Connect CTA Button -->
+      <div class="flex items-center gap-2.5">
+        <button
+          type="button"
+          onclick="openConnectModal('Tư Vấn Nhanh Cùng Cao Phong', 'Chào Phong! Mình vừa ghé website Cao Phong và muốn được tư vấn thêm về sản phẩm.')"
+          class="btn-pulse px-4 py-2.5 rounded-xl bg-apple-blue hover:bg-blue-600 text-white font-semibold text-xs sm:text-sm shadow-sm transition-all flex items-center gap-2"
+        >
+          <span class="w-2 h-2 rounded-full bg-emerald-300 animate-ping"></span>
+          <span>Kết Nối Zalo / TikTok</span>
+        </button>
+      </div>
     </div>
 
-    <div class="stars" id="stars" aria-hidden="true"></div>
+    <!-- Mobile & Tablet Responsive 4-Tab Bar -->
+    <div class="lg:hidden max-w-7xl mx-auto mt-2">
+      <div class="apple-glass rounded-2xl p-1.5 grid grid-cols-4 gap-1 shadow-apple-sm">
+        <button type="button" data-tab-target="tab-home" onclick="switchTab('tab-home')" class="nav-tab-btn active py-2 px-1 rounded-xl text-xs font-bold text-center truncate">
+          1. Trang Chủ
+        </button>
+        <button type="button" data-tab-target="tab-modules" onclick="switchTab('tab-modules')" class="nav-tab-btn py-2 px-1 rounded-xl text-xs font-bold text-apple-subtext text-center truncate">
+          2. Modules V1-V3
+        </button>
+        <button type="button" data-tab-target="tab-zalobot" onclick="switchTab('tab-zalobot')" class="nav-tab-btn py-2 px-1 rounded-xl text-xs font-bold text-apple-subtext text-center truncate">
+          3. Bot Zalo
+        </button>
+        <button type="button" data-tab-target="tab-about" onclick="switchTab('tab-about')" class="nav-tab-btn py-2 px-1 rounded-xl text-xs font-bold text-apple-subtext text-center truncate">
+          4. Cao Phong
+        </button>
+      </div>
+    </div>
+  </header>
 
-    <div id="slides"></div>
+  <!-- ==========================================================================
+       MAIN SPA CONTENT CONTAINER (4 TABS)
+       ========================================================================== -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 pt-4 pb-24">
 
-    <div
-      class="falling-container"
-      id="falling-container"
-      aria-hidden="true"
-    ></div>
+    <!-- ========================================================================
+         TAB 1: TRANG CHỦ (VIBRANT HERO + CORE PRODUCTS + LIVE FPS SIMULATOR)
+         ======================================================================== -->
+    <section id="tab-home" class="tab-panel active-panel space-y-12" aria-label="Trang Chủ Cao Phong">
+      
+      <!-- Hero Showcase Bento -->
+      <div class="relative rounded-3xl apple-card p-6 sm:p-10 lg:p-12 overflow-hidden">
+        <!-- Colorful Decorative Top Ribbon -->
+        <div class="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-[#0071E3] via-[#06B6D4] to-[#FF6B6B]"></div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+          <!-- Left Column: Friendly, Authentic Pitch -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50/90 border border-blue-200/80 text-apple-blue text-xs font-bold">
+              <span class="px-2 py-0.5 rounded-full bg-apple-blue text-white">BIG UPDATE</span>
+              <span>Chào anh em! Mình là Cao Phong — Dev Tối Ưu Hệ Thống &amp; Bot Zalo Thực Chiến</span>
+            </div>
 
-    <div class="progress-dots" id="progress-dots"></div>
+            <h1 class="text-3xl sm:text-5xl lg:text-[54px] font-extrabold tracking-tight leading-[1.12] text-apple-text">
+              Đánh thức sức mạnh <span class="text-gradient-vibrant">Android cực đại</span> &amp; Tự động hóa <span class="text-gradient-brevent">Zalo 24/7.</span>
+            </h1>
 
-    <audio id="bg-music" loop>
-      <source src="./style/nhac.mp3" type="audio/mpeg" />
-    </audio>
+            <p class="text-base sm:text-lg text-apple-subtext leading-relaxed max-w-2xl">
+              Không màu mè lý thuyết suông! Tại đây mình mang đến cho anh em bộ ba 
+              <strong class="text-apple-text font-semibold">Modules Infinity Service V1 • V2 • V3</strong> chạy mượt qua Brevent giúp khóa FPS, giảm delay cảm ứng và <strong class="text-apple-text font-semibold">hỗ trợ kéo tâm Free Fire / Free Fire Max</strong> cực bén — cùng hệ thống <strong class="text-apple-text font-semibold">Bot Zalo Full Chức Năng</strong> công nghệ mới nhất.
+            </p>
 
-    <script src="./style/script.js"></script>
-  </body>
+            <!-- Hero CTAs -->
+            <div class="flex flex-wrap items-center gap-3.5 pt-1">
+              <button
+                type="button"
+                onclick="switchTab('tab-modules')"
+                class="px-6 py-3.5 rounded-2xl bg-apple-text hover:bg-black text-white font-bold text-sm sm:text-base shadow-apple-md transition-all flex items-center gap-2.5 group"
+              >
+                <span>Khám Phá Modules V1 • V2 • V3</span>
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                </svg>
+              </button>
+
+              <button
+                type="button"
+                onclick="switchTab('tab-zalobot')"
+                class="px-6 py-3.5 rounded-2xl bg-white hover:bg-blue-50/60 text-apple-blue border border-blue-200 font-bold text-sm sm:text-base shadow-apple-sm transition-all flex items-center gap-2"
+              >
+                <span>Xem Bot Zalo Full Chức Năng</span>
+              </button>
+
+              <button
+                type="button"
+                onclick="openConnectModal('Tư Vấn Trực Tiếp Từ Trang Chủ', 'Chào Cao Phong! Mình muốn được tư vấn gói Module Android / Bot Zalo phù hợp nhất với máy của mình.')"
+                class="px-5 py-3.5 rounded-2xl bg-gradient-to-r from-orange-500 to-rose-500 hover:opacity-95 text-white font-bold text-sm sm:text-base shadow-sm transition-all"
+              >
+                Nhắn Zalo 0942940607
+              </button>
+            </div>
+
+            <!-- Trust Metrics Strip -->
+            <div class="pt-4 grid grid-cols-3 gap-3 sm:gap-6 border-t border-black/5">
+              <div>
+                <div class="text-xl sm:text-2xl font-extrabold text-apple-text">90–120Hz</div>
+                <p class="text-xs text-apple-subtext">Khóa nhịp cảm ứng &amp; mượt khung hình</p>
+              </div>
+              <div>
+                <div class="text-xl sm:text-2xl font-extrabold text-apple-blue">100% An Toàn</div>
+                <p class="text-xs text-apple-subtext">Chạy qua Brevent, không can thiệp sâu</p>
+              </div>
+              <div>
+                <div class="text-xl sm:text-2xl font-extrabold text-emerald-600">Uptime 99.9%</div>
+                <p class="text-xs text-apple-subtext">Bot Zalo vận hành siêu tốc trên VPS</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Visual Badge Stack (Brevent + Phong + Zalo Emblem) -->
+          <div class="lg:col-span-5">
+            <div class="rounded-3xl bg-gradient-to-br from-sky-50 via-white to-rose-50 p-5 sm:p-6 border border-black/5 shadow-inner space-y-4">
+              
+              <!-- Live Interactive Status Bar -->
+              <div class="flex items-center justify-between bg-white rounded-2xl px-4 py-3 shadow-apple-sm border border-black/5">
+                <div class="flex items-center gap-2.5">
+                  <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                  <span class="text-xs font-bold tracking-wide uppercase text-apple-text">Cao Phong Core Engine</span>
+                </div>
+                <span class="font-mono text-xs font-semibold px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-700">BREVENT READY</span>
+              </div>
+
+              <!-- Dual Emblem Card: Brevent x Phong + Zalo Bot x Phong -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                <!-- Card A: Brevent x Phong Logo -->
+                <div onclick="switchTab('tab-modules')" class="cursor-pointer group bg-white rounded-2xl p-4 border border-emerald-500/20 shadow-apple-sm hover:border-emerald-500 transition-all">
+                  <div class="flex items-center justify-between mb-3">
+                    <!-- Custom Brevent + Phong Combined SVG Logo -->
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500 to-cyan-500 p-0.5 shadow-md">
+                      <div class="w-full h-full bg-white rounded-[14px] flex items-center justify-center relative">
+                        <svg class="w-7 h-7 text-emerald-600" viewBox="0 0 36 36" fill="none">
+                          <circle cx="18" cy="18" r="14" stroke="currentColor" stroke-width="2.5" stroke-dasharray="5 3"/>
+                          <path d="M13 12H19.5C21.433 12 23 13.567 23 15.5C23 17.433 21.433 19 19.5 19H13V12Z" fill="#10B981" fill-opacity="0.2" stroke="#059669" stroke-width="2"/>
+                          <path d="M13 19H20.5C22.433 19 24 20.567 24 22.5C24 24.433 22.433 26 20.5 26H13V19Z" fill="#06B6D4" fill-opacity="0.25" stroke="#0891B2" stroke-width="2"/>
+                        </svg>
+                        <span class="absolute -bottom-1 -right-1 px-1.5 py-0.2 bg-apple-text text-white text-[9px] font-extrabold rounded-md">PHONG</span>
+                      </div>
+                    </div>
+                    <span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700">V1 • V2 • V3</span>
+                  </div>
+                  <h3 class="font-bold text-sm text-apple-text group-hover:text-emerald-600 transition-colors">Brevent × Phong Modules</h3>
+                  <p class="text-xs text-apple-subtext mt-1">Tối ưu sâu Android &amp; hỗ trợ kéo tâm Free Fire / FF Max.</p>
+                </div>
+
+                <!-- Card B: Zalo Bot x Phong Logo -->
+                <div onclick="switchTab('tab-zalobot')" class="cursor-pointer group bg-white rounded-2xl p-4 border border-blue-500/20 shadow-apple-sm hover:border-apple-blue transition-all">
+                  <div class="flex items-center justify-between mb-3">
+                    <!-- Custom Zalo + Phong Combined SVG Logo -->
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#0068FF] to-indigo-500 p-0.5 shadow-md">
+                      <div class="w-full h-full bg-white rounded-[14px] flex items-center justify-center relative">
+                        <svg class="w-7 h-7" viewBox="0 0 36 36" fill="none">
+                          <rect x="4" y="4" width="28" height="28" rx="8" fill="#0068FF"/>
+                          <path d="M11 13H24L12.5 24H25" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="absolute -bottom-1 -right-1 px-1.5 py-0.2 bg-rose-500 text-white text-[9px] font-extrabold rounded-md">BOT PRO</span>
+                      </div>
+                    </div>
+                    <span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-apple-blue">FULL LỆNH</span>
+                  </div>
+                  <h3 class="font-bold text-sm text-apple-text group-hover:text-apple-blue transition-colors">Zalo Bot × Cao Phong</h3>
+                  <p class="text-xs text-apple-subtext mt-1">Quản lý nhóm tự động, chống spam, giải trí 24/7.</p>
+                </div>
+              </div>
+
+              <!-- Interactive Mini Performance Preview -->
+              <div class="bg-white rounded-2xl p-4 border border-black/5 space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-bold text-apple-text">Trình Mô Phỏng Tối Ưu Cao Phong</span>
+                  <span id="homePerfBadge" class="text-xs font-mono font-bold text-apple-blue">Chế độ: Infinity V3 Max</span>
+                </div>
+                <div class="grid grid-cols-3 gap-2">
+                  <button type="button" onclick="setHomePerfMode('v1')" id="homeBtnV1" class="py-1.5 px-2 rounded-xl text-xs font-bold border border-black/10 text-apple-subtext hover:bg-gray-50 transition">
+                    Infinity V1
+                  </button>
+                  <button type="button" onclick="setHomePerfMode('v2')" id="homeBtnV2" class="py-1.5 px-2 rounded-xl text-xs font-bold border border-black/10 text-apple-subtext hover:bg-gray-50 transition">
+                    Infinity V2
+                  </button>
+                  <button type="button" onclick="setHomePerfMode('v3')" id="homeBtnV3" class="py-1.5 px-2 rounded-xl text-xs font-bold bg-apple-blue text-white shadow-sm transition">
+                    Infinity V3
+                  </button>
+                </div>
+                <div class="space-y-2 pt-1">
+                  <div>
+                    <div class="flex justify-between text-[11px] font-semibold mb-1">
+                      <span>Độ mượt khung hình &amp; ổn định FPS</span>
+                      <span id="homeFpsVal" class="font-mono text-emerald-600 font-bold">99% (Siêu mượt)</span>
+                    </div>
+                    <div class="w-full h-2 rounded-full bg-gray-100 overflow-hidden">
+                      <div id="homeFpsBar" class="h-full rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 transition-all duration-500" style="width: 99%"></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between text-[11px] font-semibold mb-1">
+                      <span>Độ nhạy cảm ứng &amp; hỗ trợ kéo tâm Free Fire / FF Max</span>
+                      <span id="homeAimVal" class="font-mono text-rose-500 font-bold">98% (Bám đầu cực ngọt)</span>
+                    </div>
+                    <div class="w-full h-2 rounded-full bg-gray-100 overflow-hidden">
+                      <div id="homeAimBar" class="h-full rounded-full bg-gradient-to-r from-orange-500 to-rose-500 transition-all duration-500" style="width: 98%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======================================================================
+           HOME SECTION 2: 4 SẢN PHẨM CHỦ LỰC CỦA CAO PHONG (SẶC SỠ & RÕ RÀNG)
+           ====================================================================== -->
+      <div class="space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <div>
+            <span class="text-xs font-extrabold uppercase tracking-wider text-apple-blue">Kho Vũ Khí Công Nghệ Cao Phong</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-apple-text mt-1">
+              Bộ Sản Phẩm Độc Quyền Được Săn Đón Nhất
+            </h2>
+          </div>
+          <p class="text-sm text-apple-subtext max-w-md">
+            Bấm vào từng sản phẩm để xem chi tiết cấu hình bên trong hoặc nhắn trực tiếp cho Phong để được tư vấn 1-1.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- PRODUCT 1: Modules Infinity Service V1 -->
+          <article class="apple-card rounded-3xl p-6 flex flex-col justify-between relative overflow-hidden group">
+            <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-emerald-400 to-teal-500"></div>
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <div class="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center">
+                  <span class="font-mono font-extrabold text-emerald-600 text-sm">CP•V1</span>
+                </div>
+                <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                  Brevent Base
+                </span>
+              </div>
+              <h3 class="text-lg font-extrabold text-apple-text group-hover:text-emerald-600 transition-colors">
+                Modules Infinity Service V1
+              </h3>
+              <p class="text-xs font-semibold text-emerald-600 mt-0.5">Tối Ưu Cơ Bản • Mượt Máy • Nhẹ RAM</p>
+              <p class="text-sm text-apple-subtext mt-3 leading-relaxed">
+                Dọn sạch tiến trình rác chạy ngầm, giải phóng bộ nhớ đệm, giúp máy mát hơn và phản hồi vuốt chạm trơn tru cho nhu cầu hàng ngày lẫn chơi game nhẹ.
+              </p>
+              <ul class="mt-4 space-y-2 text-xs text-apple-text font-medium">
+                <li class="flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> Kích hoạt nhanh qua Brevent</li>
+                <li class="flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> Giảm nóng máy &amp; hao pin ngầm</li>
+                <li class="flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> Tương thích mọi dòng máy Android</li>
+              </ul>
+            </div>
+            <div class="pt-6 mt-6 border-t border-black/5 flex items-center gap-2">
+              <button type="button" onclick="openModuleDetail('v1')" class="flex-1 py-2.5 px-3 rounded-xl bg-gray-100 hover:bg-gray-200 text-apple-text font-bold text-xs transition">
+                Xem Chi Tiết V1
+              </button>
+              <button type="button" onclick="openConnectModal('Modules Infinity Service V1', 'Chào Cao Phong! Mình muốn mua và cài đặt bản Modules Infinity Service V1 cho máy Android của mình.')" class="flex-1 py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs transition">
+                Chốt Bản V1
+              </button>
+            </div>
+          </article>
+
+          <!-- PRODUCT 2: Modules Infinity Service V2 -->
+          <article class="apple-card rounded-3xl p-6 flex flex-col justify-between relative overflow-hidden group">
+            <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-sky-500 to-indigo-500"></div>
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <div class="w-12 h-12 rounded-2xl bg-sky-50 border border-sky-200 flex items-center justify-center">
+                  <span class="font-mono font-extrabold text-sky-600 text-sm">CP•V2</span>
+                </div>
+                <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-sky-50 text-sky-700 border border-sky-200">
+                  Deep System
+                </span>
+              </div>
+              <h3 class="text-lg font-extrabold text-apple-text group-hover:text-sky-600 transition-colors">
+                Modules Infinity Service V2
+              </h3>
+              <p class="text-xs font-semibold text-sky-600 mt-0.5">Tối Ưu Chuyên Sâu • Chống Giật Lag</p>
+              <p class="text-sm text-apple-subtext mt-3 leading-relaxed">
+                Can thiệp sâu vào bộ lập lịch CPU/GPU qua giao thức Brevent, ưu tiên tài nguyên tối đa cho tựa game đang mở và hạn chế tụt FPS khi giao tranh đông người.
+              </p>
+              <ul class="mt-4 space-y-2 text-xs text-apple-text font-medium">
+                <li class="flex items-center gap-2"><span class="text-sky-500 font-bold">✓</span> Ổn định xung nhịp khi combat gắt</li>
+                <li class="flex items-center gap-2"><span class="text-sky-500 font-bold">✓</span> Tăng tốc độ nhận diện vuốt màn hình</li>
+                <li class="flex items-center gap-2"><span class="text-sky-500 font-bold">✓</span> Tối ưu mạng &amp; giảm ping bất thường</li>
+              </ul>
+            </div>
+            <div class="pt-6 mt-6 border-t border-black/5 flex items-center gap-2">
+              <button type="button" onclick="openModuleDetail('v2')" class="flex-1 py-2.5 px-3 rounded-xl bg-gray-100 hover:bg-gray-200 text-apple-text font-bold text-xs transition">
+                Xem Chi Tiết V2
+              </button>
+              <button type="button" onclick="openConnectModal('Modules Infinity Service V2', 'Chào Cao Phong! Mình muốn đăng ký bản Modules Infinity Service V2 tối ưu chuyên sâu chống giật lag.')" class="flex-1 py-2.5 px-3 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-bold text-xs transition">
+                Chốt Bản V2
+              </button>
+            </div>
+          </article>
+
+          <!-- PRODUCT 3: Modules Infinity Service V3 (FLAGSHIP) -->
+          <article class="apple-card rounded-3xl p-6 flex flex-col justify-between relative overflow-hidden border-rose-300/70 bg-gradient-to-b from-white via-white to-orange-50/40 group">
+            <div class="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-orange-500 via-rose-500 to-indigo-600"></div>
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-orange-500 to-rose-500 text-white flex items-center justify-center shadow-sm">
+                  <span class="font-mono font-extrabold text-sm">CP•V3</span>
+                </div>
+                <span class="px-2.5 py-1 rounded-full text-[11px] font-extrabold bg-gradient-to-r from-orange-500 to-rose-500 text-white shadow-sm">
+                  BẢN THƯỢNG THỪA
+                </span>
+              </div>
+              <h3 class="text-lg font-extrabold text-apple-text group-hover:text-rose-600 transition-colors">
+                Modules Infinity Service V3
+              </h3>
+              <p class="text-xs font-bold text-rose-600 mt-0.5">Full Tối Ưu Hệ Thống + Kéo Tâm FF/FF Max</p>
+              <p class="text-sm text-apple-subtext mt-3 leading-relaxed">
+                Phiên bản đỉnh cao nhất do Cao Phong tinh chỉnh: đồng bộ hóa độ nhạy cảm ứng, giảm quán tính lệch tâm, hỗ trợ kéo tâm Free Fire &amp; Free Fire Max nhẹ, đầm và chuẩn từng khung hình.
+              </p>
+              <ul class="mt-4 space-y-2 text-xs text-apple-text font-medium">
+                <li class="flex items-center gap-2"><span class="text-rose-500 font-bold">★</span> Tối ưu kéo tâm FF &amp; Free Fire Max cực bén</li>
+                <li class="flex items-center gap-2"><span class="text-rose-500 font-bold">★</span> Mở khóa tối đa phản hồi Touch Sampling</li>
+                <li class="flex items-center gap-2"><span class="text-rose-500 font-bold">★</span> Kèm hướng dẫn &amp; hỗ trợ tinh chỉnh 1-1</li>
+              </ul>
+            </div>
+            <div class="pt-6 mt-6 border-t border-black/5 flex items-center gap-2">
+              <button type="button" onclick="openModuleDetail('v3')" class="flex-1 py-2.5 px-3 rounded-xl bg-white border border-rose-200 hover:bg-rose-50 text-rose-600 font-bold text-xs transition">
+                Xem Chi Tiết V3
+              </button>
+              <button type="button" onclick="openConnectModal('Modules Infinity Service V3 (Bản Thượng Thừa)', 'Chào Cao Phong! Mình muốn chốt bản Modules Infinity Service V3 tối ưu toàn diện + hỗ trợ kéo tâm Free Fire/FF Max.')" class="flex-1 py-2.5 px-3 rounded-xl bg-gradient-to-r from-orange-500 to-rose-500 hover:opacity-95 text-white font-bold text-xs shadow-sm transition">
+                Sở Hữu V3 Ngay
+              </button>
+            </div>
+          </article>
+
+          <!-- PRODUCT 4: Zalo Bot Full Chức Năng -->
+          <article class="apple-card rounded-3xl p-6 flex flex-col justify-between relative overflow-hidden group">
+            <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-blue-600 to-indigo-600"></div>
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <div class="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-200 flex items-center justify-center">
+                  <span class="font-mono font-extrabold text-apple-blue text-xs">ZALO•PRO</span>
+                </div>
+                <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-blue-50 text-apple-blue border border-blue-200">
+                  Auto 24/7 VPS
+                </span>
+              </div>
+              <h3 class="text-lg font-extrabold text-apple-text group-hover:text-apple-blue transition-colors">
+                Bot Zalo Full Chức Năng
+              </h3>
+              <p class="text-xs font-semibold text-apple-blue mt-0.5">Quản Lý Nhóm • Chống Spam • Đa Tiện Ích</p>
+              <p class="text-sm text-apple-subtext mt-3 leading-relaxed">
+                Trợ lý tự động hóa toàn diện cho chủ nhóm Zalo &amp; dân kinh doanh: tự động chào thành viên, lọc link bẩn, chống thu hồi, tải nhạc/video không logo và kho mini-game sôi động.
+              </p>
+              <ul class="mt-4 space-y-2 text-xs text-apple-text font-medium">
+                <li class="flex items-center gap-2"><span class="text-apple-blue font-bold">✓</span> Hơn 150+ lệnh quản trị &amp; giải trí</li>
+                <li class="flex items-center gap-2"><span class="text-apple-blue font-bold">✓</span> Cắm trực tiếp trên VPS không lo nóng máy</li>
+                <li class="flex items-center gap-2"><span class="text-apple-blue font-bold">✓</span> Cài đặt nhanh, bảo hành &amp; update đều đặn</li>
+              </ul>
+            </div>
+            <div class="pt-6 mt-6 border-t border-black/5 flex items-center gap-2">
+              <button type="button" onclick="switchTab('tab-zalobot')" class="flex-1 py-2.5 px-3 rounded-xl bg-gray-100 hover:bg-gray-200 text-apple-text font-bold text-xs transition">
+                Test Bot Thử
+              </button>
+              <button type="button" onclick="openConnectModal('Bot Zalo Full Chức Năng', 'Chào Cao Phong! Mình muốn thuê/mua Bot Zalo Full Chức Năng chạy mượt trên VPS.')" class="flex-1 py-2.5 px-3 rounded-xl bg-apple-blue hover:bg-blue-600 text-white font-bold text-xs transition">
+                Thuê / Mua Bot
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================================
+         TAB 2: MODULES ANDROID & GAME (INFINITY SERVICE V1, V2, V3 + BREVENT)
+         ======================================================================== -->
+    <section id="tab-modules" class="tab-panel space-y-10" aria-label="Modules Android và Tối Ưu Game">
+      
+      <!-- Tab 2 Header Banner -->
+      <div class="apple-card rounded-3xl p-6 sm:p-10 relative overflow-hidden">
+        <div class="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-emerald-500 via-cyan-500 to-rose-500"></div>
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+          <div class="space-y-3 max-w-2xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold border border-emerald-200">
+              <span>CÔNG NGHỆ BREVENT × CAO PHONG</span>
+            </div>
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-apple-text">
+              Modules Infinity Service <span class="text-gradient-vibrant">V1 • V2 • V3</span>
+            </h2>
+            <p class="text-sm sm:text-base text-apple-subtext leading-relaxed">
+              Được viết và tinh chỉnh trực tiếp bởi <strong class="text-apple-text">Cao Phong</strong> dành riêng cho anh em dùng Android muốn máy mượt sâu từ gốc và game thủ <strong class="text-apple-text">Free Fire / Free Fire Max</strong> cần cảm giác vuốt tâm nhẹ, chuẩn xác, không bị khựng khung hình.
+            </p>
+          </div>
+
+          <!-- Custom Brevent + Phong Visual Badge -->
+          <div class="flex items-center gap-4 bg-[#F5F5F7] p-4 rounded-2xl border border-black/5">
+            <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-emerald-500 via-teal-500 to-sky-500 p-0.5 shadow-md shrink-0">
+              <div class="w-full h-full bg-white rounded-[14px] flex flex-col items-center justify-center">
+                <span class="font-mono text-xs font-extrabold text-emerald-600">BREVENT</span>
+                <span class="text-[10px] font-extrabold px-1.5 py-0.5 rounded bg-apple-text text-white mt-0.5">PHONG</span>
+              </div>
+            </div>
+            <div class="text-xs space-y-1">
+              <div class="font-extrabold text-sm text-apple-text">Cơ chế Non-Root An Toàn</div>
+              <p class="text-apple-subtext">Thực thi qua ADB / Brevent chính thống, không mod file APK game, bảo vệ tài khoản 100%.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Free Fire / Free Fire Max Sensitivity & Aim Optimizer Calculator -->
+      <div class="apple-card rounded-3xl p-6 sm:p-8 bg-gradient-to-br from-white via-white to-sky-50/50">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-6 space-y-4">
+            <span class="px-3 py-1 rounded-full bg-rose-50 text-rose-600 border border-rose-200 text-xs font-extrabold">
+              ĐẶC QUYỀN GAME THỦ FREE FIRE &amp; FF MAX
+            </span>
+            <h3 class="text-xl sm:text-2xl font-extrabold text-apple-text">
+              Trình Gợi Ý Cấu Hình Kéo Tâm &amp; Độ Nhạy Theo Dòng Máy
+            </h3>
+            <p class="text-sm text-apple-subtext leading-relaxed">
+              Chọn tình trạng máy hiện tại của bạn bên dưới để xem <strong>Modules Infinity Service</strong> xử lý độ trễ cảm ứng và gợi ý thông số DPI / Độ nhạy trong game chuẩn nhất:
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2">
+              <button type="button" onclick="selectDeviceProfile('low')" id="devBtn-low" class="p-3 rounded-2xl border border-black/10 text-left hover:border-apple-blue transition bg-white">
+                <div class="text-xs font-extrabold text-apple-text">Máy Yếu / Tầm Trung</div>
+                <div class="text-[11px] text-apple-subtext mt-0.5">RAM 3GB–4GB, hay tụt FPS</div>
+              </button>
+              <button type="button" onclick="selectDeviceProfile('mid')" id="devBtn-mid" class="p-3 rounded-2xl border border-black/10 text-left hover:border-apple-blue transition bg-white">
+                <div class="text-xs font-extrabold text-apple-text">Máy Khá / Cận Cao Cấp</div>
+                <div class="text-[11px] text-apple-subtext mt-0.5">RAM 6GB–8GB, màn 90Hz</div>
+              </button>
+              <button type="button" onclick="selectDeviceProfile('high')" id="devBtn-high" class="p-3 rounded-2xl border-2 border-apple-blue text-left transition bg-blue-50/40">
+                <div class="text-xs font-extrabold text-apple-blue">Máy Mạnh / Gaming</div>
+                <div class="text-[11px] text-apple-subtext mt-0.5">Màn 120Hz+, cần tâm siêu chuẩn</div>
+              </button>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6">
+            <div class="bg-apple-text text-white rounded-2xl p-5 sm:p-6 shadow-apple-md space-y-4 font-mono text-xs">
+              <div class="flex items-center justify-between border-b border-white/10 pb-3">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                  <span class="ml-2 text-white/80 font-bold">cao_phong_ff_optimizer.sh</span>
+                </div>
+                <span id="simRecModule" class="px-2.5 py-0.5 rounded-full bg-rose-500 text-white text-[11px] font-bold">Khuyên dùng: Infinity V3</span>
+              </div>
+
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-center">
+                <div class="bg-white/5 rounded-xl p-3 border border-white/10">
+                  <div class="text-white/60 text-[10px]">NHÌN XUNG QUANH</div>
+                  <div id="simSensGeneral" class="text-lg font-extrabold text-emerald-400 mt-1">188 / 200</div>
+                </div>
+                <div class="bg-white/5 rounded-xl p-3 border border-white/10">
+                  <div class="text-white/60 text-[10px]">RED DOT SENS</div>
+                  <div id="simSensRedDot" class="text-lg font-extrabold text-cyan-400 mt-1">175 / 200</div>
+                </div>
+                <div class="bg-white/5 rounded-xl p-3 border border-white/10 col-span-2 sm:col-span-1">
+                  <div class="text-white/60 text-[10px]">TOUCH RESPONSE</div>
+                  <div id="simTouchGain" class="text-lg font-extrabold text-amber-300 mt-1">+42% Nhạy</div>
+                </div>
+              </div>
+
+              <p id="simAdviceText" class="text-white/80 font-sans text-xs leading-relaxed bg-white/5 p-3 rounded-xl border border-white/10">
+                Với màn hình 120Hz, bản <strong>Infinity Service V3</strong> sẽ khóa tốc độ quét điểm chạm ở mức cao nhất, loại bỏ hiện tượng tâm vượt quá đầu khi vuốt nhanh trong Free Fire Max.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detailed Comparison Table: V1 vs V2 vs V3 -->
+      <div class="apple-card rounded-3xl p-6 sm:p-8 overflow-hidden">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+          <div>
+            <h3 class="text-xl sm:text-2xl font-extrabold text-apple-text">Bảng So Sánh Chi Tiết Infinity V1 • V2 • V3</h3>
+            <p class="text-xs sm:text-sm text-apple-subtext mt-1">Chọn đúng phiên bản phù hợp với nhu cầu sử dụng máy và cày rank của bạn.</p>
+          </div>
+          <button
+            type="button"
+            onclick="openConnectModal('Tư Vấn Chọn Phiên Bản Module V1/V2/V3', 'Chào Cao Phong! Mình đang phân vân giữa Infinity Service V1, V2 và V3, tư vấn giúp mình nhé!')"
+            class="px-4 py-2.5 rounded-xl bg-apple-blue text-white text-xs font-bold hover:bg-blue-600 transition self-start sm:self-auto"
+          >
+            Nhờ Phong Tư Vấn Chọn Bản
+          </button>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse min-w-[640px]">
+            <thead>
+              <tr class="border-b border-black/10 text-xs uppercase tracking-wider text-apple-subtext">
+                <th class="py-3.5 px-4 font-bold">Tính Năng Kỹ Thuật</th>
+                <th class="py-3.5 px-4 font-extrabold text-emerald-700 bg-emerald-50/50 rounded-tl-xl">Infinity Service V1</th>
+                <th class="py-3.5 px-4 font-extrabold text-sky-700 bg-sky-50/50">Infinity Service V2</th>
+                <th class="py-3.5 px-4 font-extrabold text-rose-600 bg-rose-50/60 rounded-tr-xl">Infinity Service V3 (VIP)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-black/5 text-sm">
+              <tr>
+                <td class="py-3.5 px-4 font-semibold text-apple-text">Dọn RAM, tắt ứng dụng chạy ngầm &amp; làm mát máy</td>
+                <td class="py-3.5 px-4 bg-emerald-50/30 font-bold text-emerald-600">✓ Có đầy đủ</td>
+                <td class="py-3.5 px-4 bg-sky-50/30 font-bold text-sky-600">✓ Nâng cao</td>
+                <td class="py-3.5 px-4 bg-rose-50/30 font-bold text-rose-600">✓ Tối đa &amp; Tự động</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 font-semibold text-apple-text">Tối ưu CPU/GPU &amp; Chống tụt FPS khi giao tranh</td>
+                <td class="py-3.5 px-4 bg-emerald-50/30 text-apple-subtext">Cơ bản</td>
+                <td class="py-3.5 px-4 bg-sky-50/30 font-bold text-sky-600">✓ Chuyên sâu</td>
+                <td class="py-3.5 px-4 bg-rose-50/30 font-bold text-rose-600">✓ Khóa xung nhịp đỉnh</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 font-semibold text-apple-text">Tối ưu độ trễ cảm ứng (Touch Sampling Rate)</td>
+                <td class="py-3.5 px-4 bg-emerald-50/30 text-apple-subtext">Tiêu chuẩn</td>
+                <td class="py-3.5 px-4 bg-sky-50/30 font-bold text-sky-600">✓ Tăng tốc vuốt</td>
+                <td class="py-3.5 px-4 bg-rose-50/30 font-bold text-rose-600">✓ Siêu nhạy 1ms</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 font-semibold text-apple-text">Hỗ trợ kéo tâm Free Fire &amp; Free Fire Max cực bén</td>
+                <td class="py-3.5 px-4 bg-emerald-50/30 text-apple-subtext">—</td>
+                <td class="py-3.5 px-4 bg-sky-50/30 text-sky-700 font-medium">Hỗ trợ nhẹ</td>
+                <td class="py-3.5 px-4 bg-rose-50/30 font-extrabold text-rose-600">★ Full Công Nghệ Kéo Tâm V3</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 font-semibold text-apple-text">Cài đặt qua Brevent &amp; Hỗ trợ 1-1 từ Cao Phong</td>
+                <td class="py-3.5 px-4 bg-emerald-50/30 font-bold text-emerald-600">✓ Có</td>
+                <td class="py-3.5 px-4 bg-sky-50/30 font-bold text-sky-600">✓ Có</td>
+                <td class="py-3.5 px-4 bg-rose-50/30 font-bold text-rose-600">✓ Hỗ trợ VIP Ưu Tiên</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-4 font-bold text-apple-text">Thao tác nhanh</td>
+                <td class="py-4 px-4 bg-emerald-50/30">
+                  <button type="button" onclick="openModuleDetail('v1')" class="px-3 py-2 rounded-xl bg-emerald-600 text-white text-xs font-bold hover:bg-emerald-700 transition">
+                    Chi tiết &amp; Mua V1
+                  </button>
+                </td>
+                <td class="py-4 px-4 bg-sky-50/30">
+                  <button type="button" onclick="openModuleDetail('v2')" class="px-3 py-2 rounded-xl bg-sky-600 text-white text-xs font-bold hover:bg-sky-700 transition">
+                    Chi tiết &amp; Mua V2
+                  </button>
+                </td>
+                <td class="py-4 px-4 bg-rose-50/30">
+                  <button type="button" onclick="openModuleDetail('v3')" class="px-3 py-2 rounded-xl bg-gradient-to-r from-orange-500 to-rose-500 text-white text-xs font-bold hover:opacity-95 transition">
+                    Chi tiết &amp; Mua V3
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================================
+         TAB 3: BOT ZALO PRO FULL CHỨC NĂNG (LIVE TERMINAL DEMO + FEATURES)
+         ======================================================================== -->
+    <section id="tab-zalobot" class="tab-panel space-y-10" aria-label="Bot Zalo Full Chức Năng">
+      
+      <!-- Zalo Bot Hero Card -->
+      <div class="apple-card rounded-3xl p-6 sm:p-10 relative overflow-hidden">
+        <div class="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-[#0068FF] via-indigo-500 to-cyan-400"></div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-apple-blue text-xs font-extrabold border border-blue-200">
+              <span>CÔNG NGHỆ BOT ZALO THẾ HỆ MỚI • CAO PHONG DEV</span>
+            </div>
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-apple-text">
+              Bot Zalo Full Chức Năng — <span class="text-gradient-vibrant">Tự Động Hóa Nhóm 24/7</span>
+            </h2>
+            <p class="text-sm sm:text-base text-apple-subtext leading-relaxed">
+              Giải pháp hoàn hảo cho anh em chủ Box Game, cộng đồng mua bán, hoặc đội nhóm kinh doanh trên Zalo. Bot do chính <strong class="text-apple-text">Cao Phong</strong> tối ưu mã nguồn, chạy trực tiếp trên VPS tốc độ cao, phản hồi tính bằng mili-giây và không lo giật lag điện thoại.
+            </p>
+            <div class="flex flex-wrap gap-3 pt-2">
+              <button
+                type="button"
+                onclick="openConnectModal('Bot Zalo Full Chức Năng', 'Chào Cao Phong! Mình muốn đăng ký sử dụng Bot Zalo Full Chức Năng cho nhóm của mình.')"
+                class="px-6 py-3 rounded-2xl bg-apple-blue hover:bg-blue-600 text-white font-bold text-sm shadow-apple-sm transition"
+              >
+                Liên Hệ Cài Bot Zalo Ngay
+              </button>
+              <a
+                href="https://zalo.me/0942940607"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-5 py-3 rounded-2xl bg-white border border-black/10 hover:border-apple-blue text-apple-text font-bold text-sm transition"
+              >
+                Nhắn Trực Tiếp: 0942940607
+              </a>
+            </div>
+          </div>
+
+          <!-- Custom Zalo + Phong Logo Showcase Card -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="w-full max-w-sm rounded-3xl bg-gradient-to-br from-blue-600 via-indigo-600 to-cyan-500 p-6 text-white shadow-apple-lg space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-md">
+                    <svg class="w-9 h-9" viewBox="0 0 36 36" fill="none">
+                      <rect x="3" y="3" width="30" height="30" rx="9" fill="#0068FF"/>
+                      <path d="M10 12.5H25L11.5 24.5H26" stroke="white" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="text-xs uppercase tracking-wider text-blue-100 font-bold">Official Release</div>
+                    <div class="text-lg font-extrabold">Zalo Bot × Phong</div>
+                  </div>
+                </div>
+                <span class="px-2.5 py-1 rounded-full bg-emerald-400/20 border border-emerald-300/40 text-emerald-200 text-xs font-mono font-bold">
+                  ONLINE
+                </span>
+              </div>
+              <div class="grid grid-cols-2 gap-2.5 pt-2 text-xs">
+                <div class="bg-white/10 rounded-xl p-3 backdrop-blur-sm">
+                  <div class="text-blue-100">Số lượng lệnh</div>
+                  <div class="text-base font-extrabold mt-0.5">150+ Commands</div>
+                </div>
+                <div class="bg-white/10 rounded-xl p-3 backdrop-blur-sm">
+                  <div class="text-blue-100">Tốc độ phản hồi</div>
+                  <div class="text-base font-extrabold mt-0.5">~0.15 Giây</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Live Bot Zalo Simulator -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: 6 Feature Cards -->
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="apple-card rounded-2xl p-5 space-y-2">
+            <div class="w-10 h-10 rounded-xl bg-blue-50 text-apple-blue flex items-center justify-center font-extrabold">01</div>
+            <h3 class="font-extrabold text-base text-apple-text">Quản Trị Nhóm Tự Động 24/7</h3>
+            <p class="text-xs text-apple-subtext leading-relaxed">Tự động gửi lời chào kèm ảnh bìa khi có thành viên mới vào nhóm, thông báo khi có người rời nhóm và tự động duyệt thành viên.</p>
+          </div>
+
+          <div class="apple-card rounded-2xl p-5 space-y-2">
+            <div class="w-10 h-10 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center font-extrabold">02</div>
+            <h3 class="font-extrabold text-base text-apple-text">Anti-Spam &amp; Lọc Link Độc Hại</h3>
+            <p class="text-xs text-apple-subtext leading-relaxed">Quét và xóa ngay lập tức các đường link lạ, tin nhắn rải rác, từ ngữ cấm hoặc tự động kick tài khoản spam phá nhóm.</p>
+          </div>
+
+          <div class="apple-card rounded-2xl p-5 space-y-2">
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-extrabold">03</div>
+            <h3 class="font-extrabold text-base text-apple-text">Tải Video TikTok / Nhạc Không Logo</h3>
+            <p class="text-xs text-apple-subtext leading-relaxed">Chỉ cần dán link TikTok, YouTube hoặc SoundCloud vào nhóm, Bot tự động tải video sắc nét không dính watermark.</p>
+          </div>
+
+          <div class="apple-card rounded-2xl p-5 space-y-2">
+            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-extrabold">04</div>
+            <h3 class="font-extrabold text-base text-apple-text">Chống Thu Hồi &amp; Lưu Nhật Ký</h3>
+            <p class="text-xs text-apple-subtext leading-relaxed">Phát hiện tin nhắn vừa bị thu hồi trong nhóm hoặc hỗ trợ chủ nhóm kiểm tra thống kê tương tác của từng thành viên.</p>
+          </div>
+
+          <div class="apple-card rounded-2xl p-5 space-y-2">
+            <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center font-extrabold">05</div>
+            <h3 class="font-extrabold text-base text-apple-text">Kho Mini-Game &amp; Giải Trí</h3>
+            <p class="text-xs text-apple-subtext leading-relaxed">Khuấy động phong trào nhóm với loạt lệnh nối từ, đố vui, bói bài, điểm danh nhận xu và bảng xếp hạng đại gia trong box.</p>
+          </div>
+
+          <div class="apple-card rounded-2xl p-5 space-y-2">
+            <div class="w-10 h-10 rounded-xl bg-cyan-50 text-cyan-600 flex items-center justify-center font-extrabold">06</div>
+            <h3 class="font-extrabold text-base text-apple-text">Tùy Biến Lệnh Theo Yêu Cầu</h3>
+            <p class="text-xs text-apple-subtext leading-relaxed">Cần thêm kịch bản báo giá tự động, check tài khoản game hay lệnh riêng cho shop? Cao Phong code thêm theo đúng ý bạn.</p>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Zalo Bot Chat Simulator -->
+        <div class="lg:col-span-5 apple-card rounded-3xl p-5 sm:p-6 space-y-4">
+          <div class="flex items-center justify-between border-b border-black/5 pb-3">
+            <div class="flex items-center gap-2.5">
+              <div class="w-9 h-9 rounded-xl bg-apple-blue text-white flex items-center justify-center font-extrabold text-xs">Zalo</div>
+              <div>
+                <div class="text-sm font-extrabold text-apple-text">Bấm Thử Lệnh Bot Zalo Cao Phong</div>
+                <div class="text-[11px] text-emerald-600 font-semibold">● Đang hoạt động trên VPS</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chat Output Window -->
+          <div id="botChatBox" class="h-64 overflow-y-auto rounded-2xl bg-[#F5F5F7] p-4 space-y-3 text-xs">
+            <div class="bg-white rounded-2xl rounded-tl-sm p-3 shadow-sm border border-black/5 max-w-[90%]">
+              <div class="font-extrabold text-apple-blue mb-1">🤖 Bot Zalo Cao Phong</div>
+              <p class="text-apple-text leading-relaxed">
+                Xin chào! Hãy bấm thử các nút lệnh bên dưới để xem tốc độ phản hồi thực tế của Bot nhé!
+              </p>
+            </div>
+          </div>
+
+          <!-- Quick Command Buttons -->
+          <div class="space-y-2">
+            <div class="text-[11px] font-bold text-apple-subtext uppercase tracking-wider">Bấm lệnh để test:</div>
+            <div class="flex flex-wrap gap-2">
+              <button type="button" onclick="triggerBotCommand('/menu')" class="px-3 py-1.5 rounded-xl bg-blue-50 hover:bg-blue-100 text-apple-blue font-mono font-bold text-xs transition">
+                /menu
+              </button>
+              <button type="button" onclick="triggerBotCommand('/antispam on')" class="px-3 py-1.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-600 font-mono font-bold text-xs transition">
+                /antispam on
+              </button>
+              <button type="button" onclick="triggerBotCommand('/checktt')" class="px-3 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-mono font-bold text-xs transition">
+                /checktt
+              </button>
+              <button type="button" onclick="triggerBotCommand('/tiktok')" class="px-3 py-1.5 rounded-xl bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-mono font-bold text-xs transition">
+                /tiktok
+              </button>
+              <button type="button" onclick="triggerBotCommand('/baogia')" class="px-3 py-1.5 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-700 font-mono font-bold text-xs transition">
+                /baogia
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================================================
+         TAB 4: GIỚI THIỆU BẢN THÂN CAO PHONG & KẾT NỐI TRỰC TIẾP
+         ======================================================================== -->
+    <section id="tab-about" class="tab-panel space-y-10" aria-label="Giới Thiệu Cao Phong và Liên Hệ">
+      
+      <!-- Personal Story & Profile Card -->
+      <div class="apple-card rounded-3xl p-6 sm:p-10 relative overflow-hidden">
+        <div class="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-[#0071E3] via-purple-500 to-rose-500"></div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Avatar & Quick Identity -->
+          <div class="lg:col-span-4 flex flex-col items-center text-center p-6 rounded-3xl bg-gradient-to-b from-sky-50/80 via-white to-rose-50/60 border border-black/5">
+            <div class="w-24 h-24 rounded-3xl bg-gradient-to-tr from-[#0071E3] via-indigo-500 to-[#FF6B6B] p-1 shadow-apple-md">
+              <div class="w-full h-full bg-white rounded-[20px] flex items-center justify-center">
+                <span class="text-3xl font-extrabold text-gradient-vibrant">CP</span>
+              </div>
+            </div>
+            <h2 class="text-2xl font-extrabold text-apple-text mt-4">Cao Phong</h2>
+            <p class="text-xs font-bold text-apple-blue mt-1">Android Optimization &amp; Zalo Bot Developer</p>
+            <p class="text-xs text-apple-subtext mt-3 leading-relaxed">
+              "Làm sản phẩm bằng cái tâm của người viết code thực chiến: Máy khách phải mượt thật, kéo tâm phải sướng tay thật, và Bot chạy phải ổn định lâu dài."
+            </p>
+            <div class="w-full grid grid-cols-2 gap-2 mt-5 pt-4 border-t border-black/5 text-xs">
+              <a href="https://zalo.me/0942940607" target="_blank" rel="noopener noreferrer" class="py-2.5 px-3 rounded-xl bg-apple-blue text-white font-bold hover:bg-blue-600 transition">
+                Zalo: 0942940607
+              </a>
+              <a href="https://tiktok.com/@tvkwadr90hz" target="_blank" rel="noopener noreferrer" class="py-2.5 px-3 rounded-xl bg-apple-text text-white font-bold hover:bg-black transition">
+                TikTok @tvkwadr90hz
+              </a>
+            </div>
+          </div>
+
+          <!-- Bio & Working Philosophy -->
+          <div class="lg:col-span-8 space-y-5">
+            <span class="px-3 py-1 rounded-full bg-blue-50 text-apple-blue text-xs font-extrabold border border-blue-200">
+              CÂU CHUYỆN CỦA CAO PHONG
+            </span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-apple-text">
+              Gần gũi, thực tế và luôn đồng hành cùng anh em tới khi ưng ý 100%.
+            </h3>
+            <p class="text-sm sm:text-base text-apple-subtext leading-relaxed">
+              Chào bạn! Mình là <strong class="text-apple-text">Cao Phong</strong>. Xuất phát điểm là một người đam mê vọc vạch nhân hệ thống Android và cày Free Fire trên đủ mọi thiết bị từ máy yếu đến máy khỏe, mình hiểu rõ cảm giác ức chế khi đang giao tranh căng thẳng mà máy bị khựng khung hình hay vuốt tâm không ăn.
+            </p>
+            <p class="text-sm sm:text-base text-apple-subtext leading-relaxed">
+              Đó là lý do mình phát triển chuỗi <strong class="text-apple-text">Modules Infinity Service V1, V2, V3</strong> chạy qua Brevent hoàn toàn sạch sẽ, không can thiệp trái phép vào dữ liệu game nhưng lại giải phóng tối đa sức mạnh phần cứng. Song song đó, mình xây dựng hệ thống <strong class="text-apple-text">Bot Zalo Full Chức Năng</strong> giúp anh em quản lý cộng đồng nhàn tênh.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+              <div class="p-4 rounded-2xl bg-[#F5F5F7] border border-black/5">
+                <div class="font-extrabold text-sm text-apple-text">Hỗ Trợ Cài Đặt Tận Tình</div>
+                <p class="text-xs text-apple-subtext mt-1">Kèm video &amp; hướng dẫn từng bước qua Brevent, người mới cũng làm được trong 3 phút.</p>
+              </div>
+              <div class="p-4 rounded-2xl bg-[#F5F5F7] border border-black/5">
+                <div class="font-extrabold text-sm text-apple-text">Không Văn Mẫu, Nói Thật</div>
+                <p class="text-xs text-apple-subtext mt-1">Máy bạn hợp bản nào mình tư vấn đúng bản đó, tối ưu sát với cấu hình thực tế.</p>
+              </div>
+              <div class="p-4 rounded-2xl bg-[#F5F5F7] border border-black/5">
+                <div class="font-extrabold text-sm text-apple-text">Bảo Hành &amp; Update</div>
+                <p class="text-xs text-apple-subtext mt-1">Cập nhật thông số mới khi Free Fire / Zalo ra phiên bản mới hoàn toàn yên tâm.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Direct Contact Hub (Zalo + TikTok Cards) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Zalo Direct Card -->
+        <div class="apple-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between bg-gradient-to-br from-blue-50/70 via-white to-white">
+          <div class="space-y-3">
+            <span class="px-3 py-1 rounded-full bg-blue-100 text-apple-blue text-xs font-extrabold">KÊNH HỖ TRỢ NHANH NHẤT</span>
+            <h3 class="text-xl sm:text-2xl font-extrabold text-apple-text">Zalo Chính Chủ Cao Phong</h3>
+            <p class="text-sm text-apple-subtext">
+              Kết nối trực tiếp qua số Zalo <strong class="text-apple-text">0942940607</strong> để nhận tư vấn cấu hình máy, bảng giá ưu đãi và cài đặt liền tay.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-black/5 flex flex-wrap items-center gap-3">
+            <a
+              href="https://zalo.me/0942940607"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-5 py-3 rounded-2xl bg-apple-blue hover:bg-blue-600 text-white font-bold text-xs sm:text-sm transition shadow-sm"
+            >
+              Mở Ứng Dụng Zalo (0942940607)
+            </a>
+            <button
+              type="button"
+              onclick="copyTextToClipboard('0942940607', 'Đã sao chép số Zalo 0942940607!')"
+              class="px-4 py-3 rounded-2xl bg-gray-100 hover:bg-gray-200 text-apple-text font-bold text-xs sm:text-sm transition"
+            >
+              Copy Số Zalo
+            </button>
+          </div>
+        </div>
+
+        <!-- TikTok Direct Card -->
+        <div class="apple-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between bg-gradient-to-br from-rose-50/70 via-white to-white">
+          <div class="space-y-3">
+            <span class="px-3 py-1 rounded-full bg-rose-100 text-rose-600 text-xs font-extrabold">VIDEO TEST THỰC TẾ</span>
+            <h3 class="text-xl sm:text-2xl font-extrabold text-apple-text">Kênh TikTok @tvkwadr90hz</h3>
+            <p class="text-sm text-apple-subtext">
+              Theo dõi các video test độ mượt 90Hz/120Hz, highlight kéo tâm Free Fire và hướng dẫn sử dụng Brevent trực quan trên TikTok của Phong.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-black/5 flex flex-wrap items-center gap-3">
+            <a
+              href="https://tiktok.com/@tvkwadr90hz"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-5 py-3 rounded-2xl bg-apple-text hover:bg-black text-white font-bold text-xs sm:text-sm transition shadow-sm"
+            >
+              Mở TikTok (@tvkwadr90hz)
+            </a>
+            <button
+              type="button"
+              onclick="copyTextToClipboard('tvkwadr90hz', 'Đã sao chép ID TikTok tvkwadr90hz!')"
+              class="px-4 py-3 rounded-2xl bg-gray-100 hover:bg-gray-200 text-apple-text font-bold text-xs sm:text-sm transition"
+            >
+              Copy ID TikTok
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       MODULE DETAIL DRAWER / MODAL (FOR INFINITY V1, V2, V3 DEEP INSPECTION)
+       ========================================================================== -->
+  <div id="moduleDetailModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/40 backdrop-blur-sm">
+    <div class="apple-card w-full max-w-xl rounded-3xl p-6 sm:p-8 shadow-2xl space-y-5 relative animate-[tabEnter_0.3s_ease-out]">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <span id="modModalBadge" class="px-2.5 py-1 rounded-full text-xs font-extrabold bg-emerald-50 text-emerald-700">BREVENT × CAO PHONG</span>
+          <h3 id="modModalTitle" class="text-2xl font-extrabold text-apple-text mt-2">Modules Infinity Service</h3>
+        </div>
+        <button type="button" onclick="closeModuleDetail()" class="w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-apple-text font-bold">
+          ✕
+        </button>
+      </div>
+
+      <p id="modModalDesc" class="text-sm text-apple-subtext leading-relaxed"></p>
+
+      <div class="bg-[#F5F5F7] rounded-2xl p-4 space-y-2">
+        <div class="text-xs font-extrabold uppercase tracking-wider text-apple-subtext">Các thông số tối ưu cốt lõi:</div>
+        <ul id="modModalList" class="space-y-2 text-xs sm:text-sm font-medium text-apple-text"></ul>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-end gap-3 pt-2">
+        <button type="button" onclick="closeModuleDetail()" class="px-4 py-2.5 rounded-xl bg-gray-100 hover:bg-gray-200 text-apple-text font-bold text-xs sm:text-sm">
+          Đóng Lại
+        </button>
+        <button id="modModalBuyBtn" type="button" class="px-6 py-2.5 rounded-xl bg-apple-blue hover:bg-blue-600 text-white font-bold text-xs sm:text-sm shadow-sm">
+          Liên Hệ Mua Bản Này
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       DUAL-INTERACTION ZALO & TIKTOK QUICK-CONNECT MODAL (POPUP + DIRECT LINKS)
+       ========================================================================== -->
+  <div id="connectModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/45 backdrop-blur-sm">
+    <div class="apple-card w-full max-w-lg rounded-3xl p-6 sm:p-8 shadow-2xl space-y-5 relative animate-[tabEnter_0.3s_ease-out]">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <span class="px-2.5 py-1 rounded-full text-[11px] font-extrabold bg-blue-50 text-apple-blue border border-blue-200">
+            KẾT NỐI NHANH VỚI CAO PHONG
+          </span>
+          <h3 id="connectModalSubject" class="text-xl sm:text-2xl font-extrabold text-apple-text mt-2">
+            Tư Vấn Sản Phẩm
+          </h3>
+        </div>
+        <button type="button" onclick="closeConnectModal()" class="w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-apple-text font-bold">
+          ✕
+        </button>
+      </div>
+
+      <!-- Auto-generated Greeting Message with 1-Click Copy -->
+      <div class="bg-[#F5F5F7] rounded-2xl p-4 border border-black/5 space-y-2.5">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-apple-subtext">Tin nhắn chào mẫu (Bấm copy để dán nhanh vào Zalo):</span>
+          <button
+            type="button"
+            onclick="copyGreetingMessage()"
+            class="px-2.5 py-1 rounded-lg bg-white border border-black/10 hover:border-apple-blue text-xs font-bold text-apple-blue transition"
+          >
+            Copy lời nhắn
+          </button>
+        </div>
+        <textarea
+          id="connectModalMessage"
+          rows="3"
+          class="w-full rounded-xl bg-white p-3 text-xs sm:text-sm text-apple-text border border-black/10 focus:outline-none focus:border-apple-blue"
+        ></textarea>
+      </div>
+
+      <!-- Direct Action Links (Both Popup + Instant Jump to Zalo & TikTok) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+        <a
+          href="https://zalo.me/0942940607"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="py-3.5 px-4 rounded-2xl bg-apple-blue hover:bg-blue-600 text-white font-extrabold text-xs sm:text-sm text-center shadow-sm transition flex items-center justify-center gap-2"
+        >
+          <span>Mở Thẳng Zalo: 0942940607</span>
+        </a>
+        <a
+          href="https://tiktok.com/@tvkwadr90hz"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="py-3.5 px-4 rounded-2xl bg-apple-text hover:bg-black text-white font-extrabold text-xs sm:text-sm text-center shadow-sm transition flex items-center justify-center gap-2"
+        >
+          <span>Mở TikTok: @tvkwadr90hz</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       NON-INTRUSIVE TOAST NOTIFICATION (REPLACES ALERT)
+       ========================================================================== -->
+  <div id="toastBanner" class="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 transition-all duration-300">
+    <div class="px-4 py-2.5 rounded-2xl bg-apple-text text-white text-xs sm:text-sm font-bold shadow-lg flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+      <span id="toastText">Đã sao chép thành công!</span>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FLOATING QUICK-ACTION DOCK (BOTTOM RIGHT)
+       ========================================================================== -->
+  <div class="fixed bottom-4 right-4 z-30 flex items-center gap-2 apple-glass p-1.5 rounded-2xl shadow-apple-md">
+    <a
+      href="https://zalo.me/0942940607"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="px-3.5 py-2 rounded-xl bg-apple-blue hover:bg-blue-600 text-white font-extrabold text-xs transition flex items-center gap-1.5"
+    >
+      <span>Zalo 0942940607</span>
+    </a>
+    <a
+      href="https://tiktok.com/@tvkwadr90hz"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="px-3.5 py-2 rounded-xl bg-apple-text hover:bg-black text-white font-extrabold text-xs transition flex items-center gap-1.5"
+    >
+      <span>TikTok @tvkwadr90hz</span>
+    </a>
+  </div>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="mt-auto border-t border-black/5 bg-white/70 backdrop-blur-md py-6 px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-apple-subtext">
+      <div class="flex items-center gap-2">
+        <span class="font-extrabold text-apple-text">Cao Phong</span>
+        <span>•</span>
+        <span>Modules Infinity Service V1/V2/V3 &amp; Bot Zalo Full Chức Năng</span>
+      </div>
+      <div class="flex flex-wrap items-center gap-4 font-semibold">
+        <button type="button" onclick="switchTab('tab-home')" class="hover:text-apple-blue">Trang Chủ</button>
+        <button type="button" onclick="switchTab('tab-modules')" class="hover:text-apple-blue">Modules V1–V3</button>
+        <button type="button" onclick="switchTab('tab-zalobot')" class="hover:text-apple-blue">Bot Zalo</button>
+        <button type="button" onclick="switchTab('tab-about')" class="hover:text-apple-blue">Giới Thiệu</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       CLEAN, ZERO-BUG JAVASCRIPT ENGINE
+       ========================================================================== -->
+  <script>
+    /**
+     * 1. FLAWLESS 4-TAB NAVIGATION ENGINE (Fixes the stuck tab bug 100%)
+     */
+    function switchTab(targetTabId) {
+      try {
+        const panels = document.querySelectorAll('.tab-panel');
+        const navButtons = document.querySelectorAll('[data-tab-target]');
+
+        panels.forEach((panel) => {
+          if (panel.id === targetTabId) {
+            panel.classList.add('active-panel');
+          } else {
+            panel.classList.remove('active-panel');
+          }
+        });
+
+        navButtons.forEach((btn) => {
+          const btnTarget = btn.getAttribute('data-tab-target');
+          if (btnTarget === targetTabId) {
+            btn.classList.add('active');
+            btn.classList.remove('text-apple-subtext');
+          } else {
+            btn.classList.remove('active');
+            btn.classList.add('text-apple-subtext');
+          }
+        });
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } catch (err) {
+        console.error('Tab switching error:', err);
+      }
+    }
+
+    /**
+     * 2. HOME MINI PERFORMANCE SIMULATOR (V1 / V2 / V3)
+     */
+    function setHomePerfMode(mode) {
+      const badge = document.getElementById('homePerfBadge');
+      const fpsVal = document.getElementById('homeFpsVal');
+      const fpsBar = document.getElementById('homeFpsBar');
+      const aimVal = document.getElementById('homeAimVal');
+      const aimBar = document.getElementById('homeAimBar');
+
+      const btnV1 = document.getElementById('homeBtnV1');
+      const btnV2 = document.getElementById('homeBtnV2');
+      const btnV3 = document.getElementById('homeBtnV3');
+
+      [btnV1, btnV2, btnV3].forEach((b) => {
+        b.className = 'py-1.5 px-2 rounded-xl text-xs font-bold border border-black/10 text-apple-subtext hover:bg-gray-50 transition';
+      });
+
+      if (mode === 'v1') {
+        btnV1.className = 'py-1.5 px-2 rounded-xl text-xs font-bold bg-emerald-600 text-white shadow-sm transition';
+        badge.textContent = 'Chế độ: Infinity V1 Base';
+        fpsVal.textContent = '85% (Mát & Nhẹ RAM)';
+        fpsBar.style.width = '85%';
+        aimVal.textContent = '78% (Cảm ứng mượt)';
+        aimBar.style.width = '78%';
+      } else if (mode === 'v2') {
+        btnV2.className = 'py-1.5 px-2 rounded-xl text-xs font-bold bg-sky-600 text-white shadow-sm transition';
+        badge.textContent = 'Chế độ: Infinity V2 Deep';
+        fpsVal.textContent = '93% (Chống tụt FPS)';
+        fpsBar.style.width = '93%';
+        aimVal.textContent = '89% (Nhạy & Đầm tâm)';
+        aimBar.style.width = '89%';
+      } else {
+        btnV3.className = 'py-1.5 px-2 rounded-xl text-xs font-bold bg-apple-blue text-white shadow-sm transition';
+        badge.textContent = 'Chế độ: Infinity V3 Max';
+        fpsVal.textContent = '99% (Siêu mượt 90/120Hz)';
+        fpsBar.style.width = '99%';
+        aimVal.textContent = '98% (Kéo tâm FF cực bén)';
+        aimBar.style.width = '98%';
+      }
+    }
+
+    /**
+     * 3. TAB 2 FREE FIRE SENSITIVITY & AIM OPTIMIZER CALCULATOR
+     */
+    function selectDeviceProfile(profile) {
+      const profiles = {
+        low: {
+          rec: 'Khuyên dùng: Infinity V2 / V3',
+          general: '195 / 200',
+          redDot: '186 / 200',
+          touch: '+50% Nhạy',
+          advice: 'Với máy RAM 3GB–4GB, bản Infinity Service V2 hoặc V3 sẽ dọn sạch tiến trình nền qua Brevent và bù độ trễ vuốt để kéo tâm Free Fire nhẹ tay mà không cần đè mạnh màn hình.'
+        },
+        mid: {
+          rec: 'Khuyên dùng: Infinity V3',
+          general: '190 / 200',
+          redDot: '180 / 200',
+          touch: '+45% Nhạy',
+          advice: 'Trên các dòng máy tầm trung màn 90Hz, bản Infinity Service V3 giúp ổn định khung hình khi vào bo cuối và giữ đường kéo tâm thẳng, hạn chế rung tâm.'
+        },
+        high: {
+          rec: 'Khuyên dùng: Infinity V3 VIP',
+          general: '188 / 200',
+          redDot: '175 / 200',
+          touch: '+42% Chuẩn',
+          advice: 'Với màn hình 120Hz, bản Infinity Service V3 sẽ khóa tốc độ quét điểm chạm ở mức cao nhất, loại bỏ hiện tượng tâm vượt quá đầu khi vuốt nhanh trong Free Fire Max.'
+        }
+      };
+
+      ['low', 'mid', 'high'].forEach((key) => {
+        const btn = document.getElementById('devBtn-' + key);
+        if (key === profile) {
+          btn.className = 'p-3 rounded-2xl border-2 border-apple-blue text-left transition bg-blue-50/40';
+        } else {
+          btn.className = 'p-3 rounded-2xl border border-black/10 text-left hover:border-apple-blue transition bg-white';
+        }
+      });
+
+      const data = profiles[profile] || profiles.high;
+      document.getElementById('simRecModule').textContent = data.rec;
+      document.getElementById('simSensGeneral').textContent = data.general;
+      document.getElementById('simSensRedDot').textContent = data.redDot;
+      document.getElementById('simTouchGain').textContent = data.touch;
+      document.getElementById('simAdviceText').textContent = data.advice;
+    }
+
+    /**
+     * 4. MODULE DETAIL DRAWER (V1, V2, V3)
+     */
+    const MODULE_DETAILS = {
+      v1: {
+        badge: 'BREVENT × CAO PHONG • V1',
+        title: 'Modules Infinity Service V1',
+        desc: 'Phiên bản nền tảng giúp giải phóng RAM, đóng băng các dịch vụ ngầm gây tốn pin và làm mượt thao tác vuốt chạm cơ bản trên mọi thiết bị Android.',
+        bullets: [
+          '✓ Tối ưu bộ nhớ đệm và giảm nhiệt độ máy khi sử dụng liên tục.',
+          '✓ Chạy trực tiếp qua Brevent không cần Root, an toàn tuyệt đối.',
+          '✓ Phù hợp cho máy dùng hàng ngày hoặc chơi game nhẹ nhàng.'
+        ]
+      },
+      v2: {
+        badge: 'DEEP SYSTEM • CAO PHONG V2',
+        title: 'Modules Infinity Service V2',
+        desc: 'Bản nâng cấp chuyên sâu tập trung vào khả năng duy trì xung nhịp CPU/GPU ổn định, loại bỏ tình trạng khựng hình đột ngột khi giao tranh đông người.',
+        bullets: [
+          '✓ Ưu tiên băng thông phần cứng cho tựa game đang chạy.',
+          '✓ Tăng tốc độ phản hồi cảm ứng và giảm độ trễ khung hình.',
+          '✓ Giảm hiện tượng giật lag khi quay màn hình hoặc bật mic.'
+        ]
+      },
+      v3: {
+        badge: 'BẢN THƯỢNG THỪA • CAO PHONG V3',
+        title: 'Modules Infinity Service V3 (Full Kéo Tâm FF)',
+        desc: 'Vũ khí tối thượng do Cao Phong tinh chỉnh riêng cho anh em đam mê Free Fire & Free Fire Max: kết hợp tối ưu toàn diện hệ thống với thuật toán đồng bộ cảm ứng giúp kéo tâm cực bén.',
+        bullets: [
+          '★ Tinh chỉnh độ nhạy điểm chạm giúp vuốt tâm lên đầu nhẹ và đầm tay.',
+          '★ Hạn chế tối đa tình trạng lệch tâm hoặc tâm bay quá đầu.',
+          '★ Kèm hỗ trợ cài đặt 1-1 qua Brevent và bảng độ nhạy chuẩn theo máy.'
+        ]
+      }
+    };
+
+    function openModuleDetail(versionKey) {
+      const info = MODULE_DETAILS[versionKey] || MODULE_DETAILS.v3;
+      document.getElementById('modModalBadge').textContent = info.badge;
+      document.getElementById('modModalTitle').textContent = info.title;
+      document.getElementById('modModalDesc').textContent = info.desc;
+
+      const listEl = document.getElementById('modModalList');
+      listEl.innerHTML = info.bullets.map((item) => `<li>${item}</li>`).join('');
+
+      const buyBtn = document.getElementById('modModalBuyBtn');
+      buyBtn.onclick = function () {
+        closeModuleDetail();
+        openConnectModal(
+          info.title,
+          `Chào Cao Phong! Mình vừa xem chi tiết ${info.title} trên web và muốn đặt mua ngay.`
+        );
+      };
+
+      const modal = document.getElementById('moduleDetailModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModuleDetail() {
+      const modal = document.getElementById('moduleDetailModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    /**
+     * 5. LIVE BOT ZALO COMMAND SIMULATOR
+     */
+    function triggerBotCommand(cmd) {
+      const chatBox = document.getElementById('botChatBox');
+      const responses = {
+        '/menu': '📋 [MENU BOT ZALO CAO PHONG]\n• Quản trị: /kick, /ban, /antispam, /welcome\n• Tiện ích: /tiktok, /ytb, /thoitiet, /checktt\n• Giải trí: /noitu, /taixiu, /bxh\n👉 Gõ lệnh bất kỳ để Bot xử lý trong 0.15s!',
+        '/antispam on': '🛡️ Đã BẬT chế độ Chống Spam & Lọc Link Rác 24/7! Mọi đường link lạ hoặc tin nhắn rải rác sẽ bị thu hồi tự động.',
+        '/checktt': '📊 [THỐNG KÊ TƯƠNG TÁC BOX]\n1. Cao Phong (Admin): 1,280 tin nhắn\n2. Thành viên năng nổ: 840 tin nhắn\n✅ Dữ liệu được đồng bộ thời gian thực trên VPS!',
+        '/tiktok': '🎬 Đã nhận link TikTok! Đang tải video Full HD Không Logo... Hoàn tất trong 0.8 giây!',
+        '/baogia': '💎 Liên hệ trực tiếp Dev Cao Phong qua Zalo 0942940607 để nhận gói thuê/mua Bot Zalo Full Chức Năng kèm ưu đãi cài đặt miễn phí!'
+      };
+
+      const replyText = responses[cmd] || 'Đã nhận lệnh!';
+
+      const userBubble = document.createElement('div');
+      userBubble.className = 'bg-apple-blue text-white rounded-2xl rounded-tr-sm p-2.5 px-3.5 ml-auto max-w-[75%] text-right font-mono font-bold';
+      userBubble.textContent = cmd;
+      chatBox.appendChild(userBubble);
+
+      const botBubble = document.createElement('div');
+      botBubble.className = 'bg-white rounded-2xl rounded-tl-sm p-3 shadow-sm border border-black/5 max-w-[92%] whitespace-pre-line';
+      botBubble.innerHTML = `<div class="font-extrabold text-apple-blue mb-1">🤖 Bot Zalo Cao Phong</div><div class="text-apple-text leading-relaxed">${replyText}</div>`;
+      chatBox.appendChild(botBubble);
+
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    /**
+     * 6. DUAL-INTERACTION ZALO & TIKTOK MODAL + CLIPBOARD COPY
+     */
+    function openConnectModal(subject, defaultMessage) {
+      document.getElementById('connectModalSubject').textContent = subject;
+      document.getElementById('connectModalMessage').value = defaultMessage;
+      const modal = document.getElementById('connectModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeConnectModal() {
+      const modal = document.getElementById('connectModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function copyGreetingMessage() {
+      const msgEl = document.getElementById('connectModalMessage');
+      copyTextToClipboard(msgEl.value, 'Đã copy lời nhắn! Hãy dán vào Zalo 0942940607 nhé.');
+    }
+
+    function copyTextToClipboard(text, toastMsg) {
+      try {
+        const tempInput = document.createElement('textarea');
+        tempInput.value = text;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+        showToast(toastMsg || 'Đã sao chép vào bộ nhớ tạm!');
+      } catch (e) {
+        console.error('Copy error:', e);
+      }
+    }
+
+    function showToast(message) {
+      const banner = document.getElementById('toastBanner');
+      const textEl = document.getElementById('toastText');
+      textEl.textContent = message;
+      banner.classList.remove('opacity-0');
+      banner.classList.add('opacity-100');
+      setTimeout(() => {
+        banner.classList.remove('opacity-100');
+        banner.classList.add('opacity-0');
+      }, 2600);
+    }
+  </script>
+</body>
 </html>
